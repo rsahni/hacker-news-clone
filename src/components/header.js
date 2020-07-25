@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = (props) => {
     return(
-        <header>
+        <header data-testid="header">
             <div className="hn-header-section">
                 <div className="hn-header-item-list">
                     <div className="hn-header-item first-column">Comments</div>
