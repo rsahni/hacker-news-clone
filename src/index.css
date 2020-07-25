@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.hn-news-root{
+  width: 85%;
+  margin: auto;
+}
+.hn-news-root .hn-header-section{
+  background: #ff742b;
+}
+.hn-news-root .hn-header-item{
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.hn-news-root .first-column{
+  width: 7%;
+}
+.hn-news-root .second-column,
+.hn-news-root .third-column{
+  width: 5%;
+}
+.hn-news-root .hn-header-item.second-column{
+  text-align: center;
+}
+.hn-news-root .fourth-column{
+  width: 82%;
+}
+.hn-news-root .hn-middle-section li{
+  list-style: none;
+}
+.hn-news-root .hn-middle-section li > div{
+  display: inline-block;
+}
+.hn-news-root .hn-middle-section ul{
+  padding: 0px;
+  margin: 0;
+}
+.hn-news-root .align-center{
+  text-align: center;
+}
+.hn-middle-section a,
+.post-created-time{
+  color: #828282;
+}
+.hn-middle-section .upvote .anchor-link{
+  display: inline-block;
+}
+.uparrow-icon{
+  width: 10px;
+  height: 10px;
+  border: 0px;
+  margin: 3px 2px 6px;
+  background: url(./grayarrow.gif) no-repeat;
+  display: block;
+}
+.hn-middle-section li.post-list-items{
+  background-color: #f6f6ef;
+  padding: 10px 0;
+}
+.hn-middle-section li.post-list-items:nth-child(odd){
+  background-color: #e4e4df;
+}
+.hn-middle-section .hide-btn{
+  color: inherit; 
+}
+.pagination-section{
+  padding: 10px;
+  text-align: right;
+  background-color: #f6f6ef;
+}
+.pagination-section a{
+  color: #ef6437;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-section{
+  background-color: #f6f6ef;
+}
+.footer-section .orange-separator{
+  height: 2px;
+  background-color: #ef6437;
+}
+.footer-section .chart-section{
+  margin-top: 30px;
+}
+.pagination-section a.disableLink{
+  color: #828282;
+  cursor: default;
+}
