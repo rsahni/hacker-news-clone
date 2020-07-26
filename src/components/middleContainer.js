@@ -30,7 +30,7 @@ const MiddleContainer = (props) => {
     return (<React.Fragment>
                 <div className="hn-middle-section">
                     <ul>
-                        {data && data.map((post, index)=>{
+                        {data && data.map((post, index) => {
                             if(postHideData.indexOf(post.objectID) === -1){
                                 return (<li key={`hn-post-list-${index}`} className="post-list-items">
                                     <div className="first-column align-center">
@@ -43,13 +43,15 @@ const MiddleContainer = (props) => {
                                     </div>
                                     <div className="third-column align-center upvote"> 
                                         <div className="mobile-heading">UpVote</div>
-                                        <div className="column-content"><a href="#" onClick={(e) => {handleUpvoteClick(e, post.objectID, post.points)}} className="anchor-link" ><span className="uparrow-icon"></span></a></div>
+                                        <div className="column-content"><button  aria-label="Up Vote this post" onClick={(e) => {handleUpvoteClick(e, post.objectID, post.points)}} className="anchor-link" ><span className="uparrow-icon"></span></button></div>
                                     </div>
                                     <div className="fourth-column">
                                         <div className="mobile-heading">News Details</div>
                                         <div className="column-content"><PostDescription post={post} postHideData={postHideData} setPostHideData={setPostHideData} /></div>
                                     </div>
                                 </li>);
+                            }else{
+                                return false;
                             }
                         })}
                         

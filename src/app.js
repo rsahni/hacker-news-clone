@@ -10,7 +10,7 @@ const App = () => {
   const [pageNo, setPageNo] = useState(0);
   const [disableNextButton, setDisableNextButton] = useState(false);
   const [postHideData, setPostHideData] = useState([]);
-   
+
   useEffect(()=>{
     fetchData(pageNo);
     if(window.localStorage.getItem('postHideData')){

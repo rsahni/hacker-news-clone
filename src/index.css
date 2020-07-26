@@ -58,6 +58,12 @@ code {
 }
 .hn-middle-section .upvote .anchor-link{
   display: inline-block;
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .uparrow-icon{
   width: 10px;
@@ -75,17 +81,29 @@ code {
   background-color: #e4e4df;
 }
 .hn-middle-section .hide-btn{
-  color: inherit; 
+  color: inherit;
+  background: none!important;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 .pagination-section{
   padding: 10px;
   text-align: right;
   background-color: #f6f6ef;
 }
-.pagination-section a{
+.pagination-section button{
   color: #ef6437;
   font-weight: bold;
   text-decoration: none;
+  background: none!important;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.pagination-section button:disabled{
+  color: #828282;
+  cursor: default;
 }
 .footer-section{
   background-color: #f6f6ef;
@@ -136,9 +154,8 @@ code {
   .hn-news-root .hn-header-item {
     font-size: 11px;
   }
-  .hn-middle-section li.post-list-items{
-    font-size: 14px;
-  }
+  .hn-middle-section li.post-list-items,
+  .hn-middle-section .hide-btn,
   .pagination-section a{
     font-size: 14px;
   }
@@ -183,9 +200,9 @@ code {
   .hn-news-root .hn-header-item {
     font-size: 10px;
   }
-  .hn-middle-section li.post-list-items{
-    font-size: 12px;
-  }
+  
+  .hn-middle-section li.post-list-items,
+  .hn-middle-section .hide-btn,
   .pagination-section a{
     font-size: 12px;
   }

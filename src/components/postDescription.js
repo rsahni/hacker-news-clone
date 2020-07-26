@@ -21,7 +21,7 @@ const PostDescription = (props) => {
 
     return(
         <React.Fragment>
-            {post.title} (<a href={post.url} >{siteName}</a>) by {post.author} <span className="post-created-time"><Moment fromNow>{post.created_at}</Moment></span> <a href="#" className="hide-btn" onClick={(e) => {handleHideOnClick(e)}} >[hide]</a>
+            {post.title} (<a href={post.url} >{siteName}</a>) by {post.author} <span className="post-created-time"><Moment fromNow>{post.created_at}</Moment></span> <button  aria-label="Hide this post" className="hide-btn" onClick={(e) => {handleHideOnClick(e)}} >[hide]</button>
         </React.Fragment>
     );
 };
