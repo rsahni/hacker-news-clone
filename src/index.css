@@ -12,7 +12,7 @@ code {
     monospace;
 }
 .hn-news-root{
-  width: 85%;
+  width: 95%;
   margin: auto;
 }
 .hn-news-root .hn-header-section{
@@ -25,17 +25,19 @@ code {
   font-size: 14px;
 }
 .hn-news-root .first-column{
-  width: 7%;
+  width: 8%;
 }
 .hn-news-root .second-column,
 .hn-news-root .third-column{
-  width: 5%;
+  width: 6%;
 }
 .hn-news-root .hn-header-item.second-column{
   text-align: center;
+  padding: 0 4px;
+  box-sizing: border-box;
 }
 .hn-news-root .fourth-column{
-  width: 82%;
+  width: 80%;
 }
 .hn-news-root .hn-middle-section li{
   list-style: none;
@@ -98,4 +100,93 @@ code {
 .pagination-section a.disableLink{
   color: #828282;
   cursor: default;
+}
+.site-title-mobile,
+.post-list-items .mobile-heading{
+  display: none;
+}
+.hn-header-item-list{
+  padding: 4px 0;
+}
+/* Media Queries for Responsive Behaviour */
+@media (min-width: 769px) and (max-width: 968px) {
+  .hn-news-root {
+    width: 99%;
+    margin: auto;
+  }
+  .hn-news-root .hn-header-item {
+    font-size: 12px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .hn-news-root {
+    width: 100%;
+    margin: auto;
+  }
+  .hn-news-root .first-column {
+    width: 12%;
+  }
+  .hn-news-root .second-column, 
+  .hn-news-root .third-column {
+    width: 9%;
+  }
+  .hn-news-root .fourth-column {
+    width: 70%;
+  }
+  .hn-news-root .hn-header-item {
+    font-size: 11px;
+  }
+  .hn-middle-section li.post-list-items{
+    font-size: 14px;
+  }
+  .pagination-section a{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hn-header-item-list{
+    display: none;
+  }
+  .site-title-mobile{
+    display: block;
+  }
+  .site-title-mobile h1{
+    margin: 0;
+    font-size: 16px;
+    padding: 10px;
+  }
+  .hn-news-root {
+    width: 100%;
+    margin: auto;
+  }
+  .hn-news-root .first-column,
+  .hn-news-root .second-column, 
+  .hn-news-root .third-column,
+  .hn-news-root .fourth-column {
+    width: 100%;
+  }
+  .post-list-items .mobile-heading{
+    display: inline-block;
+    width: 25%;
+    text-align: left;
+    box-sizing: border-box;
+    font-weight: bold;
+    padding: 10px;
+  }
+  .post-list-items .column-content{
+    display: inline-block;
+    width: 75%;
+    text-align: left;
+    padding: 10px 0px 10px 10px;
+    box-sizing: border-box;
+  }
+  .hn-news-root .hn-header-item {
+    font-size: 10px;
+  }
+  .hn-middle-section li.post-list-items{
+    font-size: 12px;
+  }
+  .pagination-section a{
+    font-size: 12px;
+  }
 }
