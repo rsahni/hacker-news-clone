@@ -3,12 +3,13 @@ import {Line} from 'react-chartjs-2';
 
 const Footer = (props) => {
     const {data} = props;
-    const xData = [];
-    const yData = [];
     const [xStateData , setXStateData] = useState([]);
     const [yStateData , setYStateData] = useState([]);
 
     useEffect(()=>{
+        const xData = [];
+        const yData = [];
+        
         data.forEach((post, index)=>{
             xData.push(post.objectID);
             yData.push(post.points);
