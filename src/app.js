@@ -9,9 +9,13 @@ const App = () => {
   const [data, setData] = useState([]);
   const [pageNo, setPageNo] = useState(0);
   const [disableNextButton, setDisableNextButton] = useState(false);
+  const [postHideData, setPostHideData] = useState([]);
    
   useEffect(()=>{
     fetchData(pageNo);
+    if(window.localStorage.getItem('postHideData')){
+      setPostHideData(window.localStorage.getItem('postHideData'));
+    }
   }, []);
 
   useEffect(()=>{
@@ -34,7 +38,7 @@ const App = () => {
   return (
     <React.Fragment>
       <Header />
-      <MiddleContainer data={data} />
+      <MiddleContainer data={data} postHideData={postHideData} setPostHideData={setPostHideData} />
       <Paginataion pageNo={pageNo} setPageNo={setPageNo} disableNextButton={disableNextButton} />
       <Footer data={data} />
     </React.Fragment>
