@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PostDescription from '../components/postDescription';
 
 const MiddleContainer = (props) => {
-    const {data, postHideData, setPostHideData} = props;
-    const [postVotes, setPostVotes] = useState({});
-
-    useEffect(()=>{
-        if(window.localStorage.getItem('postVoteCounts')){
-            setPostVotes(JSON.parse(window.localStorage.getItem('postVoteCounts')));
-        };
-    }, []);
+    const {data, postHideData, setPostHideData, postVotes, setPostVotes} = props;
     
     const handleUpvoteClick = (e, objectID, votes) =>{
         e.preventDefault(); 
@@ -28,7 +21,7 @@ const MiddleContainer = (props) => {
     };
 
     return (<React.Fragment>
-                <div className="hn-middle-section">
+                <div className="hn-middle-section" >
                     <ul>
                         {data && data.map((post, index) => {
                             if(postHideData.indexOf(post.objectID) === -1){

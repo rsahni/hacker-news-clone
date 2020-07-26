@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders pagination matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="pagination-section"
+  >
+    <button
+      aria-label="Previous Page"
+      class=""
+    >
+      Previous
+    </button>
+     | 
+    <button
+      aria-label="Next Page"
+      class=""
+    >
+      Next
+    </button>
+  </div>
+</DocumentFragment>
+`;

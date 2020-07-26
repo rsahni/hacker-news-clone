@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders header matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    data-testid="header"
+  >
+    <div
+      class="hn-header-section"
+    >
+      <div
+        class="site-title-mobile"
+      >
+        <h1>
+          HN Clone Rahul
+        </h1>
+      </div>
+      <div
+        class="hn-header-item-list"
+      >
+        <div
+          class="hn-header-item first-column"
+        >
+          Comments
+        </div>
+        <div
+          class="hn-header-item second-column"
+        >
+          View Count
+        </div>
+        <div
+          class="hn-header-item third-column"
+        >
+          UpVote
+        </div>
+        <div
+          class="hn-header-item fourth-column"
+        >
+          News Details
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;

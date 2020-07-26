@@ -10,12 +10,17 @@ const App = () => {
   const [pageNo, setPageNo] = useState(0);
   const [disableNextButton, setDisableNextButton] = useState(false);
   const [postHideData, setPostHideData] = useState([]);
+  const [postVotes, setPostVotes] = useState({});
 
   useEffect(()=>{
     fetchData(pageNo);
     if(window.localStorage.getItem('postHideData')){
       setPostHideData(window.localStorage.getItem('postHideData'));
     }
+
+    if(window.localStorage.getItem('postVoteCounts')){
+      setPostVotes(JSON.parse(window.localStorage.getItem('postVoteCounts')));
+    };
   }, []);
 
   useEffect(()=>{
@@ -38,9 +43,23 @@ const App = () => {
   return (
     <React.Fragment>
       <Header />
-      <MiddleContainer data={data} postHideData={postHideData} setPostHideData={setPostHideData} />
-      <Paginataion pageNo={pageNo} setPageNo={setPageNo} disableNextButton={disableNextButton} />
-      <Footer data={data} />
+      <MiddleContainer 
+        data={data} 
+        postHideData={postHideData} 
+        setPostHideData={setPostHideData}
+        postVotes={postVotes} 
+        setPostVotes={setPostVotes}
+      />
+      <Paginataion 
+        pageNo={pageNo} 
+        setPageNo={setPageNo} 
+        disableNextButton={disableNextButton} 
+      />
+      <Footer 
+        data={data} 
+        postHideData={postHideData} 
+        postVotes={postVotes}
+      />
     </React.Fragment>
   );
 }
