@@ -34,3 +34,29 @@ Project structure is:
 - .babelrc
 - package.json
 - README.md
+
+To run on local machine clone the app:
+- Node Server
+ - NPM RUN INSTALL
+ - NPM RUN BUILD
+ - NPM RUN START
+- Webpack Dev Server
+  - NPM RUN INSTALL
+  - NPM RUN START-WEBPACK
+
+For upvotes and hide functionality I have used Local Storage API of the browser as it lets you access stored object across browser sessions.
+
+For Graph (Line Chart) I have used react-chartjs-2 npm package
+
+For CI Pipeline I have used Circle CI and integrated it with github
+For App Deployment I have used Heruko server also I have activated CD on the github Master branch
+
+LIGHTHOUSE Score on the Heruko Server are as follow:
+Performance: 81
+Accessibility: 96
+Best Practices: 93
+SEO: 100
+PWA: 
+    Fast and reliable: 3/3
+    Installable: 3/3
+    PWA Optimized: 6/7
