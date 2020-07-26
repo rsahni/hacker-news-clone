@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, getByText } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import Pagination from '../components/pagination';
+import Pagination from '../pagination';
 
 test('test if links exists', () => {
     render(<Pagination />);
