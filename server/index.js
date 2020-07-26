@@ -1,6 +1,7 @@
 import express from 'express';
 const path = require("path");
 const fs = require("fs");
+const compression = require('compression');
 
 import React from 'react';
 
@@ -10,6 +11,7 @@ import App from '../src/app';
 
 const PORT = process.env.PORT || 8080;
 const app = express();
+app.use(compression());
 
 app.get('/', (req, res) => {
     const app = ReactDOMServer.renderToString(<App />);
