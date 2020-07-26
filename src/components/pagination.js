@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 
 const Pagination = (props) => {
     const {pageNo, setPageNo, disableNextButton} = props;
-    let isPrevDisable = pageNo === 0 ? 'disableLink': '';
+    let disablePrevBtnClass = pageNo === 0 ? 'disableLink': '';
+    let disablePrevBtn = pageNo === 0 ? true: false;
     let disableNextBtn = disableNextButton ? 'disableLink' : '';
     const [pageCount, setPageCount] = useState(pageNo);
 
@@ -26,7 +27,7 @@ const Pagination = (props) => {
 
     return (<React.Fragment>
                 <div className="pagination-section">
-                    <a href="#" className={isPrevDisable} onClick={(e) => {handlePrevious(e)}} >Previous</a> | <a href="#" className={disableNextBtn} onClick={(e) => {handleNext(e)}}>Next</a>
+                    <button  aria-label="Previous Page" className={disablePrevBtnClass} disabled={disablePrevBtn} onClick={(e) => {handlePrevious(e)}} >Previous</button> | <button  aria-label="Next Page" disabled={disableNextButton} className={disableNextBtn} onClick={(e) => {handleNext(e)}}>Next</button>
                 </div>
             </React.Fragment>);
 };
