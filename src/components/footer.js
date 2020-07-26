@@ -22,7 +22,7 @@ const Footer = (props) => {
         labels: xStateData,
         datasets: [
           {
-            label: 'Rainfall',
+            label: 'Votes',
             fill: false,
             lineTension: 0,
             backgroundColor: 'rgba(75,192,192,1)',
