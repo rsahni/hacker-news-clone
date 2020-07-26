@@ -9,3 +9,8 @@ test('renders header', () => {
         queryByTestId(document.documentElement, 'header'),
     ).toBeInTheDocument()
 });
+
+test('renders header matches snapshot', () => {   
+    const { asFragment } = render(<Header />);
+    expect(asFragment()).toMatchSnapshot();
+});

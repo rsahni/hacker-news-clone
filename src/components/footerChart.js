@@ -2,21 +2,36 @@ import React, {useEffect, useState} from 'react';
 import {Line} from 'react-chartjs-2';
 
 const FooterChart = (props) => {
-    const {data} = props;
+    const {data, postHideData, postVotes} = props;
     const [xStateData , setXStateData] = useState([]);
     const [yStateData , setYStateData] = useState([]);
 
     useEffect(()=>{
+        setPointsDataForGraph();
+    }, [data]);
+
+    useEffect(()=>{
+        setPointsDataForGraph();
+    }, [postHideData]);
+
+    useEffect(()=>{
+        setPointsDataForGraph();
+    }, [postVotes]);
+
+    const setPointsDataForGraph = ()=>{
         const xData = [];
         const yData = [];
         
         data.forEach((post, index)=>{
-            xData.push(post.objectID);
-            yData.push(post.points);
+            if(postHideData.indexOf(post.objectID) === -1){
+                let tempYData = postVotes[post.objectID] ? postVotes[post.objectID] : post.points;
+                xData.push(post.objectID);
+                yData.push(tempYData);
+            }
         });
         setXStateData(xData);
         setYStateData(yData);
-    }, [data]);
+    };
 
     const state = {
         labels: xStateData,
