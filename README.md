@@ -1,5 +1,6 @@
 # hacker-news-clone
 I have used basic create-react-app to make this HN clone and used express server for the node app and implemented SSR on top of Create React App.
+Demo URL is: https://hn-clone-rahul.herokuapp.com/
 
 Project structure is:
 - public
